@@ -1,0 +1,41 @@
+{
+  "name": "express-form-validator",
+  "version": "1.0.0",
+  "description": "form validator middleware for express.js",
+  "main": "./src/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanchchch/express-form-validator.git"
+  },
+  "author": "Chung-Hwan Han <cndghks15@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hanchchch/express-form-validator/issues"
+  },
+  "homepage": "https://github.com/hanchchch/express-form-validator#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@typescript-eslint/eslint-plugin": "^4.28.2",
+    "@typescript-eslint/parser": "^4.28.2",
+    "eslint": "^7.30.0",
+    "eslint-config-prettier": "^8.3.0",
+    "express": "^4.17.1",
+    "husky": "^4.3.8",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.2",
+    "typescript": "^4.3.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": "eslint --fix --max-warnings=0",
+    "src/**/*.ts": "prettier --write"
+  }
+}

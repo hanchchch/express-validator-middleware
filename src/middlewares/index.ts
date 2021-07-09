@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import { ValidationResult } from "@src/interfaces";
 
-export default function baseValidator<T = { [key: string]: string }>(
+export function baseValidator<T = { [key: string]: string }>(
   validators: { [key in keyof T]: ((value: string) => ValidationResult)[] },
   req: Request,
   res: Response,
@@ -18,5 +18,5 @@ export default function baseValidator<T = { [key: string]: string }>(
   });
 
   if (errors.length > 0) return res.status(400).json({ errors: errors });
-  else next();
+  else return next();
 }

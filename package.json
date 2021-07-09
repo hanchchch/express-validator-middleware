@@ -1,5 +1,5 @@
 {
-  "name": "express-form-validator",
+  "name": "express-validator-middleware",
   "version": "1.0.0",
   "description": "form validator middleware for express.js",
   "main": "./src/index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hanchchch/express-form-validator.git"
+    "url": "git+https://github.com/hanchchch/express-validator-middleware.git"
   },
   "author": "Chung-Hwan Han <cndghks15@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hanchchch/express-form-validator/issues"
+    "url": "https://github.com/hanchchch/express-validator-middleware/issues"
   },
-  "homepage": "https://github.com/hanchchch/express-form-validator#readme",
+  "homepage": "https://github.com/hanchchch/express-validator-middleware#readme",
   "devDependencies": {
     "@types/express": "^4.17.13",
     "@typescript-eslint/eslint-plugin": "^4.28.2",

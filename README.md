@@ -1,16 +1,16 @@
-# Express validator ts
+# Express validator middleware
 Typescript-friendly form validator middleware for express.js.
 
 
 ## install
 ```bash
-$ npm install express-validator-ts
+$ npm install express-validator-middleware
 ```
 
 
 ## Usage
 ```javascript
-import baseValidator, { safeUsername, safeEmail } from "express-validator-ts";
+import baseValidator, { safeUsername, safeEmail } from "express-validator-middleware";
 
 interface SignupForm {
   username: string;

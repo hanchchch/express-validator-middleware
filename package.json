@@ -1,8 +1,9 @@
 {
   "name": "express-validator-middleware",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "description": "form validator middleware for express.js",
-  "main": "./index.js",
+  "main": "build/index.js",
+  "types" : "build/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"

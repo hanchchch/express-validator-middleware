@@ -3,13 +3,11 @@
     "target": "es6",
     "module": "commonjs",
     "allowJs": false,
-    "outDir": ".",
+    "outDir": "./build",
     "strict": true,
+    "declaration": true,
     "moduleResolution": "node",
     "baseUrl": "./src",
-    "paths": {
-      "@src/*": ["*"]
-    },
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,

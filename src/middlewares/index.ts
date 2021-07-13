@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import { ValidationResult } from "@src/interfaces";
+import { ValidationResult } from "../interfaces";
 
 export function baseValidator<T = { [key: string]: string }>(
   validators: { [key in keyof T]: ((value: string) => ValidationResult)[] },

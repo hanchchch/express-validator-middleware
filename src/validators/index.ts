@@ -1,4 +1,4 @@
-import { ValidationResult } from "@src/interfaces";
+import { ValidationResult } from "../interfaces";
 
 export const notEmpty = (value: string): ValidationResult => {
   if (value) return { success: true };

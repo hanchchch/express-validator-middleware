@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from "express";
-import { ValidationResult } from "../interfaces";
+import { notEmpty } from "validators";
+import { ValidationResult } from "interfaces";
 
 export function baseValidator<T = { [key: string]: string }>(
   validators: { [key in keyof T]: ((value: string) => ValidationResult)[] },
@@ -11,7 +12,7 @@ export function baseValidator<T = { [key: string]: string }>(
   const errors: { [key: string]: string }[] = [];
 
   validatorKeys.forEach((key) => {
-    validators[key as keyof T].forEach((validator) => {
+    [notEmpty, ...validators[key as keyof T]].forEach((validator) => {
       const result = validator(req.body[key]);
       if (!result.success && result.error) errors.push({ [key]: result.error });
     });

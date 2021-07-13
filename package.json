@@ -1,6 +1,6 @@
 {
   "name": "express-validator-middleware",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "form validator middleware for express.js",
   "main": "build/index.js",
   "types" : "build/index.d.ts",

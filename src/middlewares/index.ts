@@ -3,7 +3,7 @@ import { notEmpty } from "validators";
 import { ValidationResult } from "interfaces";
 
 export function baseValidator<T = { [key: string]: string }>(
-  validators: { [key in keyof T]: ((value: string) => ValidationResult)[] },
+  validators: { [key in keyof T]: ((value: string, form: T) => ValidationResult)[] },
   req: Request,
   res: Response,
   next: NextFunction
@@ -13,7 +13,7 @@ export function baseValidator<T = { [key: string]: string }>(
 
   validatorKeys.forEach((key) => {
     [notEmpty, ...validators[key as keyof T]].forEach((validator) => {
-      const result = validator(req.body[key]);
+      const result = validator(req.body[key], req.body);
       if (!result.success && result.error) errors.push({ [key]: result.error });
     });
   });

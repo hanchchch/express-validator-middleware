@@ -40,3 +40,10 @@ export const startsWith =
       if (value.startsWith(start)) return { success: true };
       return { success: false, error: `Must start with ${start}.` };
     };
+
+export const oneOf =
+  (validValues: string[]) =>
+    (value: string): ValidationResult => {
+      if (validValues.includes(value)) return { success: true };
+      return { success: false, error: `Must be one of ${validValues}.` };
+    };
